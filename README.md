@@ -179,15 +179,16 @@ Bind:Destroy()
 
 ### Creating a Dropdown
 
-<pre class="language-lua"><code class="lang-lua">LeftSection:AddDropDown{
-<strong>	Name = &#x3C;string>,
-</strong>	Default = &#x3C;any>,
-	Options = &#x3C;table>,
+```lua
+LeftSection:AddDropDown{
+	Name = <string>,
+	Default = <any>,
+	Options = <table>,
 	Callback = function(Value)
 		print(Value)
 	end
 }
-</code></pre>
+```
 
 #### Methods
 
