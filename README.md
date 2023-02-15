@@ -12,15 +12,15 @@ local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Playe
 
 ```lua
 local Window = Library:Window{
-	Name = <title : string>, 
-	Creator = <name : string>,
-	Script = <name : string>,
+	Name = <string>, 
+	Creator = <string>,
+	Script = <string>,
 	Hotkey = {
-		Key = <keycode : EnumItem>, 
+		Key = <Enum.KeyCode>, 
 		Enabled = <boolean>
 	}
 	Saves = {
-		FileId = <name : string>,
+		FileId = <string>,
 		Enabled = <boolean>
 	}
 	Sounds = <boolean>
@@ -33,7 +33,7 @@ local Window = Library:Window{
 
 ```lua
 local Tab = Window:AddTab{
-	Name = <text : string>,
+	Name = <string>,
 	TextColor3 = <Color3>,
 }
 ```
@@ -58,9 +58,9 @@ local RightSection = Tab:RightSection(<name : string>)
 
 ```lua
 Library:Notification{
-	Title = <header : string>,
-	Content = <description : string>,
-	Time = <duration : number>
+	Title = <string>,
+	Content = <string>,
+	Time = <number>
 }
 ```
 
