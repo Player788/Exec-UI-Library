@@ -1015,8 +1015,8 @@ function Library:Window(Table)
 
 		end,
 	}
-	local FPS = Info:AddButton{"Avg. FPS : "}
-	local PING, ping = Info:AddButton{"Avg. PING : "}
+	local FPS = Info:AddButton{Name = "Avg. FPS : "}
+	local PING, ping = Info:AddButton{Name = "Avg. PING : Couldn't fetch"}
 -- 	if not game:GetService("RunService"):IsStudio() then
 -- 		for a,v in pairs(game.CoreGui.RobloxGui.PerformanceStats:GetDescendants()) do
 -- 			if v:IsA("TextLabel") and v.Name == "TitleLabel" then
@@ -1073,6 +1073,10 @@ function Library:Window(Table)
 				Library:Notification{Content = "Logs printed in output"}
 			end
 			
+		end}
+	Misc:AddButton{Name = "Delete", 
+		Callback = function()
+			Library:Destroy()
 		end}
 	Library:Notification({Content = "Loaded! \nUI: ExecLib v" .._G.Version})
 	return Tabs
