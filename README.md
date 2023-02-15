@@ -60,7 +60,8 @@ local RightSection = Tab:RightSection(<name : string>)
 Library:Notification{
 	Title = <string>,
 	Content = <string>,
-	Time = <number>
+	Time = <number>,
+	Color = <color3>
 }
 ```
 
@@ -196,6 +197,8 @@ Dropdown:Remove(<index>)
 Dropdown:Set(<index>)
 ```
 
+***
+
 ### Creating a Colorpicker
 
 ```lua
@@ -211,6 +214,8 @@ LeftSection:AddColor{
 ```lua
 Colorpicker:Set(<Color3>)
 ```
+
+***
 
 ## Miscellaneous
 
