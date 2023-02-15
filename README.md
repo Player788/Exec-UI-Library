@@ -70,7 +70,7 @@ Library:Notification({
 
 ```lua
 LeftSection:AddButton({
-	Text = <name : string>,
+	Name = <name : string>,
 	TextColor = <Color3>,
 	Callback = <function>,
 })
@@ -93,7 +93,7 @@ Button:Destroy()
 
 ```lua
 LeftSection:AddToggle({
-	Text = <name : string>,
+	Name = <name : string>,
 	TextColor = <Color3>,
 	Default = <boolean>,
 	Callback = <function> <returns : boolean>
@@ -113,7 +113,7 @@ Toggle:Destroy()
 
 ```lua
 LeftSection:AddSlider({
-	Text = <name : string>,
+	Name = <name : string>,
 	TextColor = <Color3>,
 	Default = <number>,
 	Min = <number>,
@@ -136,7 +136,7 @@ Slider:Destroy()
 
 ```lua
 LeftSection:AddTextBox({
-	Text = <name : string>,
+	Name = <name : string>,
 	TextColor = <Color3>,
 	PressEnter = <boolean>,
 	ClearOnFocus <boolean>,
@@ -160,7 +160,7 @@ Input:Destroy()
 
 ```lua
 LeftSection:AddBind({
-	Text = <name : string>,
+	Name = <name : string>,
 	TextColor = <Color3>,
 	Default = <Keycode : EnumItem>
 	Hold = <boolean>,
@@ -181,7 +181,7 @@ Bind:Destroy()
 
 ```lua
 LeftSection:AddDropDown({
-	Text = "Select Option",
+	Name = "Select Option",
 	Default = "16",
 	Options = {16, 200},
 	Callback = function(Value)
