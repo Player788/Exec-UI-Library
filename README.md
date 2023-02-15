@@ -11,7 +11,7 @@ local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Playe
 ### Creating a Window
 
 ```lua
-local Window = Library:Window({
+local Window = Library:Window{
 	Name = <title : string>, 
 	Creator = <name : string>,
 	Script = <name : string>,
@@ -24,7 +24,7 @@ local Window = Library:Window({
 		Enabled = <boolean>
 	}
 	Sounds = <boolean>
-})
+}
 ```
 
 ***
@@ -57,11 +57,11 @@ local RightSection = Tab:RightSection(<name : string>)
 ### Creating a Notification
 
 ```lua
-Library:Notification({
+Library:Notification{
 	Title = <header : string>,
 	Content = <description : string>,
 	Time = <duration : number>
-})
+}
 ```
 
 ***
@@ -69,15 +69,14 @@ Library:Notification({
 ### Creating a Button
 
 ```lua
-LeftSection:AddButton({
-	Name = <name : string>,
+LeftSection:AddButton{
+	Name = <string>,
 	TextColor = <Color3>,
 	Callback = <function>,
-})
+}
 ```
 
-* You need to state your element as a variable to get its methods, Example `local Button = Section:AddButton{}`\
-
+* You need to state your element as a variable to get its methods, Example `local Button = Section:AddButton{}`
 * You can also chain element methods, Example `LeftSection:AddButton{}:AddButton{}`
 
 #### Methods
@@ -92,12 +91,12 @@ Button:Destroy()
 ### Creating a Toggle
 
 ```lua
-LeftSection:AddToggle({
-	Name = <name : string>,
+LeftSection:AddToggle{
+	Name = <string>,
 	TextColor = <Color3>,
 	Default = <boolean>,
 	Callback = <function> <returns : boolean>
-})
+}
 ```
 
 #### Methods
@@ -112,15 +111,15 @@ Toggle:Destroy()
 ### Creating a Slider
 
 ```lua
-LeftSection:AddSlider({
-	Name = <name : string>,
+LeftSection:AddSlider{
+	Name = <string>,
 	TextColor = <Color3>,
 	Default = <number>,
 	Min = <number>,
 	Max = <number>,
 	Increment = <number>,
 	Callback = <function> <returns : number>
-})
+}
 ```
 
 #### Methods
@@ -135,15 +134,15 @@ Slider:Destroy()
 ### Creating a Textbox
 
 ```lua
-LeftSection:AddTextBox({
-	Name = <name : string>,
+LeftSection:AddTextBox{
+	Name = <string>,
 	TextColor = <Color3>,
 	PressEnter = <boolean>,
 	ClearOnFocus <boolean>,
 	Default = <string>,
 	Placeholder = <string>,
 	Callback = <function> <returns : string>
-})
+}
 
 ```
 
@@ -159,13 +158,13 @@ Input:Destroy()
 ### Creating a Keybind
 
 ```lua
-LeftSection:AddBind({
-	Name = <name : string>,
+LeftSection:AddBind{
+	Name = <string>,
 	TextColor = <Color3>,
 	Default = <Keycode : EnumItem>
 	Hold = <boolean>,
 	Callback = <function> <returns : <string> <holding : boolean>
-})
+}
 ```
 
 #### Methods
@@ -179,16 +178,15 @@ Bind:Destroy()
 
 ### Creating a Dropdown
 
-```lua
-LeftSection:AddDropDown({
-	Name = "Select Option",
-	Default = "16",
-	Options = {16, 200},
+<pre class="language-lua"><code class="lang-lua">LeftSection:AddDropDown{
+<strong>	Name = &#x3C;string>,
+</strong>	Default = &#x3C;any>,
+	Options = &#x3C;table>,
 	Callback = function(Value)
 		print(Value)
 	end
-})
-```
+}
+</code></pre>
 
 #### Methods
 
@@ -198,7 +196,21 @@ Dropdown:Remove(<index>)
 Dropdown:Set(<index>)
 ```
 
-***
+### Creating a Colorpicker
+
+```lua
+LeftSection:AddColor{
+	Name = <string>,
+	TextColor = <Color3>,
+	Callback = <function> <returns : <color3>
+}
+```
+
+#### Methods
+
+```lua
+Colorpicker:Set(<Color3>)
+```
 
 ## Miscellaneous
 
